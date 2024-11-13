@@ -18,16 +18,25 @@ function App() {
 			<div className="black-nav">
 				<h4>ReactBlog</h4>
 			</div>
+			<button
+				onClick={() => {
+					let newArray = [...글제목];
+					newArray.sort();
+					b(newArray);
+				}}
+			>
+			가나다순정렬
+			</button>
+			<button
+				onClick={() => {
+					let newName = [...글제목];
+					newName[0] = '여자 코트 추천';
+					b(newName);
+				}}
+			>
+			글수정
+			</button>
 			<div className='list'>
-				<input
-					type='button'
-					value='button'
-					onClick={() => {
-						let newName = [...글제목];
-						newName[0] = '여자 코트 추천';
-						b(newName);
-					}}
-				/>
 				<h4>
 					{글제목[0]}&nbsp;
 					<span onClick={() => {
